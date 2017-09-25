@@ -7,7 +7,12 @@ defmodule Catalog do
 	Returns a list of available products.
 	"""
 	def list_products do
-		[ "Tomato", "Apple", "Potato" ]
+		[
+			%Catalog.Product{id: 1, name: "Tomato", price: 44},
+			%Catalog.Product{id: 2, name: "Apple", price: 22},
+			%Catalog.Product{id: 3, name: "Potato", price: 35}
+
+		]
 	end
 
 	def random_product(list) when is_list(list) do
